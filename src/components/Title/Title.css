@@ -1,0 +1,11 @@
+.title-w-img{
+    display: flex;
+    background-color: red;
+    color: black;
+    padding: 1rem;
+}
+
+.logo {
+    height: 4em;
+    padding: 1.5rem 1.5rem 0rem 0rem;
+}

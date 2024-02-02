@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "baseUrl": "src"
+    }
+}
+
+// Solo funciona en TypeScript
