@@ -6,7 +6,7 @@ const Title = ({title}) => {
         <>
             <div className="title-w-img">
                 <img src={lock} className="logo" alt="Lock logo" />
-                <h1>{title}</h1>
+                <h3>{title}</h3>
             </div>
         </>
     )

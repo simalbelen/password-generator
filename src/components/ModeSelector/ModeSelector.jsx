@@ -2,9 +2,13 @@ import './ModeSelector.css'
 import moon from '../../assets/moon.svg'
 import sun from '../../assets/sun.svg'
 
-const ModeSelector = () => {
+const ModeSelector = ({toogleTheme}) => {
+    const changeMode = () => {
+        toogleTheme()
+    }
+
     return (
-        <div className='mode-selector-div'>
+        <div className='mode-selector-div' onClick={changeMode}>
             <img src={sun} className="mode-selector-svg" alt="Sun logo" />
             <label className="switch">
                 <input type="checkbox"/>
@@ -17,3 +21,4 @@ const ModeSelector = () => {
 }
 
 export default ModeSelector
+
