@@ -3,6 +3,7 @@ import ModeSelector from '../ModeSelector/ModeSelector'
 import DropdownButton from '../DropdownButton/DropdownButton'
 import Title from '../Title/Title'
 
+
 const NavigationBar = ({ title, toogleTheme }) => {
     const foo = (language) => {
         console.log(language)
