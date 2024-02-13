@@ -1,6 +1,6 @@
 .title-w-img{
     display: flex;
-    color: black;
+    color: var(--legible-text);
 }
 
 .logo {

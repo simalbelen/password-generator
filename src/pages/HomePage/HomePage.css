@@ -7,13 +7,18 @@
 
     justify-content: center;
     align-content: center;
-    background-color: red;
+    background-color: var(--secondary-color);
 }
 
 .generated-psw{
-    max-width: 1080px;
+    display: flex;
+    justify-content: center;
     background-color: aqua;
+    justify-self: center;
     padding: 1rem;
+    max-width: 1080px;
+    min-width: 200px;
+    margin: 0 auto;
 }
 
 .card {

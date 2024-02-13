@@ -1,8 +1,12 @@
 .night-mode{
-    $principal-color: #c51e1e;
+    --principal-color: #25283D;
+    --secondary-color: #8F3985;
+    --legible-text: #EFD9CE;
 }   
 
 .day-mode{
-    $principal-color: #dadada;
+    --principal-color: #CEA2AC;
+    --secondary-color: #A675A1;
+    --legible-text: #25283D;
 }
 

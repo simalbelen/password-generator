@@ -1,4 +1,4 @@
-import './NavigationBar.css'
+import './NavigationBar.scss'
 import ModeSelector from '../ModeSelector/ModeSelector'
 import DropdownButton from '../DropdownButton/DropdownButton'
 import Title from '../Title/Title'

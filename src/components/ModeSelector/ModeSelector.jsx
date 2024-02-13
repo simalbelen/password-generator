@@ -8,11 +8,11 @@ const ModeSelector = ({toogleTheme}) => {
     }
 
     return (
-        <div className='mode-selector-div' onClick={changeMode}>
+        <div className='mode-selector-div' >
             <img src={sun} className="mode-selector-svg" alt="Sun logo" />
             <label className="switch">
                 <input type="checkbox"/>
-                <span className="slider round"></span>
+                <span className="slider round" onClick={changeMode}/>
             </label>
             <img src={moon} className="mode-selector-svg" alt="Moon logo" />
         </div>

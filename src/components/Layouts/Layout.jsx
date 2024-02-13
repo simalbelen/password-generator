@@ -9,7 +9,6 @@ const Layout = () => {
     const appClassName = nightMode ? 'night-mode' : 'day-mode'
     const toogleTheme = () => {
         setNightMode(!nightMode)
-        console.log(nightMode)
     }
 
     const dict_titles = {

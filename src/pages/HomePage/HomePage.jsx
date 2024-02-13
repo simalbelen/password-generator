@@ -1,5 +1,5 @@
 import './HomePage.css'
-import Chip from '../../components/Chip/Chip'
+// import Chip from '../../components/Chip/Chip'
 
 const HomePage = () => {
     return (
@@ -7,7 +7,7 @@ const HomePage = () => {
             <div className="generated-psw">
                 <p> HOLA </p>
             </div>
-            <div>
+            {/* <div>
                 <span>Password length</span>
                 <input
                     type="checkbox"
@@ -16,7 +16,7 @@ const HomePage = () => {
                     value="Paneer"
                 />
             </div>
-            <Chip label={'Hola'} variant={'super-high-security'} />
+            <Chip label={'Hola'} variant={'super-high-security'} /> */}
         </div>
     )
 }
