@@ -73,3 +73,7 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+
+.colored-svg{
+    fill: var(--secondary-color);
+}

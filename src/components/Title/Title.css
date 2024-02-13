@@ -1,6 +1,6 @@
 .title-w-img{
     display: flex;
-    color: var(--legible-text);
+    color: var(--principal-text);
 }
 
 .logo {

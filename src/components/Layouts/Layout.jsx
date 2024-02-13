@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import NavigationBar from '../NavigationBar/NavigationBar'
 import { AppRouter } from '../routes/AppRouter'
-import './Layout.scss'
+import './Layout.css'
 
 const Layout = () => {
     const [nightMode, setNightMode] = useState(false)
@@ -22,7 +22,7 @@ const Layout = () => {
                 title={dict_titles[location.pathname]}
                 toogleTheme={toogleTheme}
             />
-            <AppRouter />
+            <AppRouter/>
         </div>
     )
 }

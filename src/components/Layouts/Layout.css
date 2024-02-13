@@ -1,0 +1,16 @@
+.night-mode{
+    --principal-color: #545C52;
+    --secondary-color: #4a90e2;
+    --accent-color: #e74c3c; 
+    --principal-text: #ecf0f1;
+    --secondary-text: #bdc3c7;
+}   
+
+.day-mode{
+    --principal-color: #C4B7CB;
+    --secondary-color: #d50000;
+    --accent-color: #e74c3c;
+    --principal-text: #2c3e50;
+    --secondary-text: #95a5a6; 
+}
+

@@ -1,7 +1,7 @@
 
 .password-generator{
     width: 100%;
-    height:calc(100vh - 54px);
+    height:calc(100vh - 65.5px);
     display: flex;
     flex-direction: column;
 
@@ -10,18 +10,68 @@
     background-color: var(--secondary-color);
 }
 
-.generated-psw{
+.generated-password{
+    display: flex;
+    justify-content:space-between;
+    background-color: var(--principal-color);
+    padding: 0 1rem;
+    border-radius: 1rem;
+    max-width: 50rem;
+    min-width: 50rem;
+    margin: 0 auto;
+}
+
+.password-customization{
+    background-color: var(--principal-color);
+    max-width: 50rem;
+    min-width: 50rem;
+    padding: 0 1rem;
+    border-radius: 1rem;
+    margin: 1rem auto;
     display: flex;
     justify-content: center;
-    background-color: aqua;
-    justify-self: center;
+    flex-direction: column;
+}
+
+.password-customization-options{
+    display: flex;
+
+}
+.password-length{
+    flex:1;
     padding: 1rem;
-    max-width: 1080px;
-    min-width: 200px;
-    margin: 0 auto;
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+}
+
+.password-length > p{
+    color: black;
+    width: 5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+.separator{
+    flex: 0.005;
+    margin: 0 1rem;
+    border-radius: 50rem;
+    background-color: blueviolet;
+}
+
+
+.password-options{
+    flex:1;
+    padding: 1rem;
+    background-color: aqua;
 }
 
 .card {
     padding: 2em;
 }
 
+.colored-svg{
+    height: 2em;
+}
