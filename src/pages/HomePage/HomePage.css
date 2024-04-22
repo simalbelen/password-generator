@@ -1,7 +1,6 @@
-
-.password-generator{
+.password-generator {
     width: 100%;
-    height:calc(100vh - 65.5px);
+    height: calc(100vh - 65.5px);
     display: flex;
     flex-direction: column;
 
@@ -10,18 +9,36 @@
     background-color: var(--secondary-color);
 }
 
-.generated-password{
+.generated-password {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
+    align-content: center;
     background-color: var(--principal-color);
     padding: 0 1rem;
     border-radius: 1rem;
-    max-width: 50rem;
-    min-width: 50rem;
+    max-width: 55rem;
+    min-width: 55rem;
     margin: 0 auto;
 }
 
-.password-customization{
+.password-content {
+    max-width: 55rem;
+    min-width: 55rem;
+    display: flex;
+    padding: 0 1rem;
+    margin: 1rem auto;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.password-info {
+    display: flex;
+    background-color: var(--principal-color);
+    margin: 1rem auto;
+    border-radius: 1rem;
+}
+
+.password-customization {
     background-color: var(--principal-color);
     max-width: 50rem;
     min-width: 50rem;
@@ -33,19 +50,20 @@
     flex-direction: column;
 }
 
-.password-customization-options{
+.password-customization-options {
     display: flex;
-
+    flex: 2;
 }
-.password-length{
-    flex:1;
+.password-length {
+    flex: 1;
     padding: 1rem;
     background-color: blanchedalmond;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.password-length > p{
+.password-length > p {
     color: black;
     width: 5rem;
     font-size: 1.5rem;
@@ -54,16 +72,15 @@
     border-radius: 2rem;
     padding: 1rem;
 }
-.separator{
+.separator {
     flex: 0.005;
     margin: 0 1rem;
     border-radius: 50rem;
     background-color: blueviolet;
 }
 
-
-.password-options{
-    flex:1;
+.password-options {
+    flex: 1;
     padding: 1rem;
     background-color: aqua;
 }
@@ -72,6 +89,18 @@
     padding: 2em;
 }
 
-.colored-svg{
+.colored-svg {
     height: 2em;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    width: 5rem;
+    justify-content: space-around;
+}
+
+.password-text {
+    font-size: 1.25rem;
+    padding: 0.75rem;
 }

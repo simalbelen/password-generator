@@ -1,6 +1,7 @@
 #chip{
     padding: 0.4rem 0.8rem;
     border-radius: 20rem;
+    width: fit-content;
     color: rgb(31, 31, 31);
 }
 
