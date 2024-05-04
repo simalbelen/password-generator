@@ -11,6 +11,7 @@ function OptionsSelector({
     setSelectedOptions,
 }: OptionsSelectorProps) {
     const { t } = useTranslation()
+
     return (
         <>
             <span className="w-full text-center">{t('password-options')}</span>

@@ -9,5 +9,11 @@
   "uppercase":"Mayúsculas",
   "lowercase":"Minúsculas",
   "numbers":"Números",
-  "symbols":"Símbolos"
+  "symbols":"Símbolos",
+  "very-insecure":"Muy inseguro",
+  "insecure":"Inseguro",
+  "normal":"Normal",
+  "secure":"Seguro",
+  "very-secure":"Muy seguro",
+  "coppied-password":"Contraseña copiada al portapapeles"
 }

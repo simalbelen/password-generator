@@ -18,7 +18,7 @@ function SecurityInfo({ security }: SecurityInfoProps) {
                         src="Lvl0.svg"
                     />
                     <Chip size="lg" className="bg-red-400">
-                        Muy inseguro
+                        {t('very-insecure')}
                     </Chip>
                 </>
             ) : null}
@@ -30,7 +30,7 @@ function SecurityInfo({ security }: SecurityInfoProps) {
                         src="Lvl1.svg"
                     />
                     <Chip size="lg" className="bg-orange-400">
-                        Inseguro
+                        {t('insecure')}
                     </Chip>
                 </>
             ) : null}
@@ -42,7 +42,7 @@ function SecurityInfo({ security }: SecurityInfoProps) {
                         src="Lvl2.svg"
                     />
                     <Chip size="lg" className="bg-yellow-400">
-                        Normal
+                        {t('normal')}
                     </Chip>
                 </>
             ) : null}
@@ -54,7 +54,7 @@ function SecurityInfo({ security }: SecurityInfoProps) {
                         src="Lvl3.svg"
                     />
                     <Chip size="lg" className="bg-lime-400">
-                        Seguro
+                        {t('secure')}
                     </Chip>
                 </>
             ) : null}
@@ -66,7 +66,7 @@ function SecurityInfo({ security }: SecurityInfoProps) {
                         src="Lvl4.svg"
                     />
                     <Chip size="lg" className="bg-green-400">
-                        Muy seguro
+                        {t('very-secure')}
                     </Chip>
                 </>
             ) : null}

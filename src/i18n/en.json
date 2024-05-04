@@ -9,5 +9,11 @@
   "uppercase":"Uppercase",
   "lowercase":"Lowercase",
   "numbers":"Numbers",
-  "symbols":"Symbols"
+  "symbols":"Symbols",
+  "very-insecure":"Very insecure",
+  "insecure":"Insecure",
+  "normal":"Normal",
+  "secure":"Secure",
+  "very-secure":"Very secure",
+  "coppied-password":"Password copied to clipboard"
 }

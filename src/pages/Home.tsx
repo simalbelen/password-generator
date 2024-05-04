@@ -1,9 +1,9 @@
-import HomeMenu from '../components/HomeMenu'
+import PasswordGeneratorMenu from '../components/PasswordGeneratorMenu'
 
 function Home() {
     return (
         <>
-            <HomeMenu />
+            <PasswordGeneratorMenu />
         </>
     )
 }

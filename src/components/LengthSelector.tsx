@@ -24,14 +24,16 @@ function LengthSelector({
                 <div
                     className="flex justify-center items-center bg-secondary dark:bg-secondaryNight w-10 aspect-square rounded-full hover:cursor-pointer"
                     onClick={() => {
-                        setPasswordLength(passwordLength - 1)
+                        passwordLength <= 4
+                            ? setPasswordLength(4)
+                            : setPasswordLength(passwordLength - 1)
                     }}
                 >
                     <MinusIcon color="black" />
                 </div>
                 <Slider
                     size="lg"
-                    maxValue={50}
+                    maxValue={30}
                     minValue={4}
                     step={1}
                     color="secondary"
@@ -48,7 +50,9 @@ function LengthSelector({
                 <div
                     className="flex justify-center items-center bg-secondary dark:bg-secondaryNight w-10 aspect-square rounded-full hover:cursor-pointer"
                     onClick={() => {
-                        setPasswordLength(passwordLength + 1)
+                        passwordLength >= 30
+                            ? setPasswordLength(30)
+                            : setPasswordLength(passwordLength + 1)
                     }}
                 >
                     <PlusIcon color="black" />
