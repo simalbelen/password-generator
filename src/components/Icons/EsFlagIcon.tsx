@@ -1,17 +1,6 @@
-export function EsFlagIcon({ color }) {
+const EsFlagIcon = () => {
     return (
-        <svg
-            width="800px"
-            height="800px"
-            viewBox="0 0 36 36"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            aria-hidden="true"
-            role="img"
-            class="iconify iconify--twemoji"
-            preserveAspectRatio="xMidYMid meet"
-            stroke={color}
-        >
+        <svg viewBox="0 0 36 36" className="w-6 h-6">
             <path
                 fill="#C60A1D"
                 d="M36 27a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v18z"
@@ -36,3 +25,5 @@ export function EsFlagIcon({ color }) {
         </svg>
     )
 }
+
+export default EsFlagIcon

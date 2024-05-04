@@ -1,76 +1,28 @@
-import {
-    Navbar,
-    NavbarContent,
-    NavbarItem,
-    Button,
-    Switch,
-} from '@nextui-org/react'
-import { IoSunny } from 'react-icons/io5'
-import { IoMoon } from 'react-icons/io5'
-import {
-    Dropdown,
-    DropdownTrigger,
-    DropdownMenu,
-    DropdownItem,
-} from '@nextui-org/react'
-import { useMemo, useState } from 'react'
-import { EsFlagIcon } from './Icons/EsFlagIcon'
+import { Navbar, NavbarContent, NavbarItem } from '@nextui-org/react'
+import '../i18n/config'
+import { useTranslation } from 'react-i18next'
 
-function Header({}) {
-    const [selectedKeys, setSelectedKeys] = useState(new Set(['Idioma']))
+import LanguageSelector from './LanguageSelector'
+import ModeSelector from './ModeSelector'
 
-    const selectedValue = useMemo(
-        () => Array.from(selectedKeys).join(', ').replaceAll('_', ' '),
-        [selectedKeys]
-    )
-
+function Header() {
+    const { t } = useTranslation()
     //collapsed coger estado en useState y modificar
     return (
-        <Navbar>
+        <Navbar className="bg-primary dark:bg-primaryNight">
             <NavbarContent justify="start">
                 <NavbarItem>
-                    <Switch
-                        defaultSelected
-                        size="lg"
-                        color="secondary"
-                        thumbIcon={({ isSelected, className }) =>
-                            isSelected ? (
-                                <IoSunny className={className} />
-                            ) : (
-                                <IoMoon className={className} />
-                            )
-                        }
-                    ></Switch>
+                    <ModeSelector />
                 </NavbarItem>
             </NavbarContent>
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
-                <NavbarItem>Generador de contraseñas</NavbarItem>
+                <NavbarItem>
+                    <span className="text-3xl">{t('title')}</span>
+                </NavbarItem>
             </NavbarContent>
             <NavbarContent justify="end">
                 <NavbarItem>
-                    <Dropdown>
-                        <DropdownTrigger>
-                            <Button variant="bordered" className="capitalize">
-                                {selectedValue}
-                            </Button>
-                        </DropdownTrigger>
-                        <DropdownMenu
-                            aria-label="Single selection example"
-                            variant="flat"
-                            disallowEmptySelection
-                            selectionMode="single"
-                            selectedKeys={selectedKeys}
-                            onSelectionChange={setSelectedKeys}
-                        >
-                            <DropdownItem
-                                key="en"
-                                startContent={<EsFlagIcon />}
-                            >
-                                Inglés
-                            </DropdownItem>
-                            <DropdownItem key="es">Español</DropdownItem>
-                        </DropdownMenu>
-                    </Dropdown>
+                    <LanguageSelector />
                 </NavbarItem>
             </NavbarContent>
         </Navbar>

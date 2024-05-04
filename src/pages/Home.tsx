@@ -1,11 +1,11 @@
-import HomeMenu from "../components/HomeMenu";
+import HomeMenu from '../components/HomeMenu'
 
 function Home() {
-  return (
-    <>
-      <HomeMenu />
-    </>
-  );
+    return (
+        <>
+            <HomeMenu />
+        </>
+    )
 }
 
-export default Home;
+export default Home

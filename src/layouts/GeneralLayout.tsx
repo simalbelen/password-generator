@@ -4,7 +4,7 @@ function GeneralLayout({ children }: any) {
     return (
         <div className="flex h-screen flex-col">
             <Header />
-            <main className="w-full">{children}</main>
+            <main className="w-full h-full">{children}</main>
         </div>
     )
 }

@@ -13,11 +13,7 @@ export default {
                 primary: '#ffd8be',
                 secondary: '#ffeedd',
                 primaryNight: '#9381ff',
-                secondaryNight: 'b8b8ff',
-            },
-            backgroundImage: {
-                background_menu:
-                    "linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('/background_img.avif')",
+                secondaryNight: '#b8b8ff',
             },
         },
     },
