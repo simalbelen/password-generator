@@ -2,5 +2,12 @@
   "title": "Generador de contraseñas",
   "en": "Inglés",
   "es": "Español",
-  "language":"Idioma"
+  "language":"Idioma",
+  "password-customization":"¡Personaliza tu contraseña!",
+  "password-length":"Longitud de la contraseña",
+  "password-options":"Opciones de contraseña",
+  "uppercase":"Mayúsculas",
+  "lowercase":"Minúsculas",
+  "numbers":"Números",
+  "symbols":"Símbolos"
 }

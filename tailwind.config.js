@@ -1,4 +1,5 @@
 const { nextui } = require('@nextui-org/react')
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -14,6 +15,9 @@ export default {
                 secondary: '#ffeedd',
                 primaryNight: '#9381ff',
                 secondaryNight: '#b8b8ff',
+            },
+            fontFamily: {
+                sans: ['"Proxima Nova"', ...defaultTheme.fontFamily.sans],
             },
         },
     },
