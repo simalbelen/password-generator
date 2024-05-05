@@ -14,9 +14,9 @@ function LanguageSelector() {
 
     return (
         <>
-            <Dropdown>
+            <Dropdown className="bg-primary border-secondary border-2">
                 <DropdownTrigger>
-                    <Button variant="bordered" className="capitalize">
+                    <Button className="capitalize bg-primary">
                         {t('language')}
                     </Button>
                 </DropdownTrigger>

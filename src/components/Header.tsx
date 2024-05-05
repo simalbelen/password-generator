@@ -9,7 +9,10 @@ function Header() {
     const { t } = useTranslation()
     //collapsed coger estado en useState y modificar
     return (
-        <Navbar className="bg-primary dark:bg-primaryNight select-none">
+        <Navbar
+            className="bg-secondary select-none text-foreground"
+            classNames={{ wrapper: 'max-w-[2048]' }}
+        >
             <NavbarContent justify="start">
                 <NavbarItem>
                     <ModeSelector />

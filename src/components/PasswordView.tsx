@@ -3,14 +3,12 @@ import CopyIcon from './Icons/CopyIcon'
 import ReloadIcon from './Icons/ReloadIcon'
 import { useTranslation } from 'react-i18next'
 import { useEffect } from 'react'
-import zxcvbn from 'zxcvbn'
 
 interface PasswordViewProps {
     password: string
     setPassword: (password: string) => void
     selectedOptions: string[]
     passwordLength: number
-    setSecurity: (security: number) => void
 }
 
 function PasswordView({
@@ -18,7 +16,6 @@ function PasswordView({
     setPassword,
     selectedOptions,
     passwordLength,
-    setSecurity,
 }: PasswordViewProps) {
     const { t } = useTranslation()
 
@@ -47,27 +44,26 @@ function PasswordView({
         }
 
         setPassword(password)
-        setSecurity(zxcvbn(password).score)
     }
 
     return (
         <>
-            <span> {password} </span>
+            <span className="text-xl"> {password} </span>
             <div className="flex gap-3">
                 <div
-                    className="flex justify-center items-center bg-secondary dark:bg-secondaryNight w-10 aspect-square rounded-full hover:cursor-pointer"
+                    className="flex justify-center items-center bg-secondary w-10 aspect-square rounded-full hover:cursor-pointer"
                     onClick={() => {
                         navigator.clipboard.writeText(password)
                         toast.success(t('coppied-password'))
                     }}
                 >
-                    <CopyIcon color="black" />
+                    <CopyIcon color="currentColor" />
                 </div>
                 <div
-                    className="flex justify-center items-center bg-secondary dark:bg-secondaryNight w-10 aspect-square rounded-full hover:cursor-pointer"
+                    className="flex justify-center items-center bg-secondary w-10 aspect-square rounded-full hover:cursor-pointer"
                     onClick={generatePassword}
                 >
-                    <ReloadIcon color="black" />
+                    <ReloadIcon color="currentColor" />
                 </div>
             </div>
         </>

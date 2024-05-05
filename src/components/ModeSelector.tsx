@@ -13,14 +13,14 @@ function ModeSelector() {
             (!('color-theme' in localStorage) &&
                 window.matchMedia('(prefers-color-scheme: dark)').matches)
         ) {
-            setDarkMode(true)
+            toggleMode(true)
         } else {
-            setDarkMode(false)
+            toggleMode(false)
         }
     }, [])
 
-    const toggleMode = () => {
-        setDarkMode(!darkMode)
+    const toggleMode = (darkMode: boolean) => {
+        setDarkMode(darkMode)
         if (localStorage.getItem('color-theme')) {
             if (localStorage.getItem('color-theme') === 'light') {
                 document.documentElement.classList.add('dark')
@@ -46,15 +46,19 @@ function ModeSelector() {
         <>
             <Switch
                 size="lg"
-                color="secondary"
-                className="checked:"
                 isSelected={darkMode}
-                onValueChange={toggleMode}
+                onValueChange={(e) => {
+                    toggleMode(e)
+                }}
+                classNames={{
+                    thumb: 'bg-transparent border-transparent shadow-none',
+                    wrapper: 'bg-primary',
+                }}
                 thumbIcon={({ isSelected }) =>
                     isSelected ? (
-                        <MoonIcon color={'black'} />
-                    ) : (
                         <SunIcon color={'black'} />
+                    ) : (
+                        <MoonIcon color={'currentColor'} />
                     )
                 }
             />

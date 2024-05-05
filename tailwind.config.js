@@ -10,17 +10,33 @@ export default {
     ],
     theme: {
         extend: {
-            colors: {
-                primary: '#ffd8be',
-                secondary: '#ffeedd',
-                primaryNight: '#9381ff',
-                secondaryNight: '#b8b8ff',
-            },
             fontFamily: {
                 sans: ['"Proxima Nova"', ...defaultTheme.fontFamily.sans],
             },
         },
     },
     darkMode: 'class',
-    plugins: [nextui()],
+    plugins: [
+        nextui({
+            prefix: 'nextui', // prefix for themes variables
+            addCommonColors: false, // override common colors (e.g. "blue", "green", "pink").
+            defaultTheme: 'light', // default theme from the themes object
+            defaultExtendTheme: 'light', // default theme to extend on custom themes
+            layout: {}, // common layout tokens (applied to all themes)
+            themes: {
+                light: {
+                    layout: {}, // light theme layout tokens
+                    colors: {
+                        primary: '#F1EAFF',
+                        secondary: '#DCBFFF',
+                    }, // light theme colors
+                },
+                dark: {
+                    layout: {}, // dark theme layout tokens
+                    colors: { primary: '#3C5B6F', secondary: '#153448' }, // dark theme colors
+                },
+                // ... custom themes
+            },
+        }),
+    ],
 }

@@ -1,75 +1,81 @@
 import { Chip, Image } from '@nextui-org/react'
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import zxcvbn, { ZXCVBNResult } from 'zxcvbn'
+import Security0Image from './Images/Security0'
 
 interface SecurityInfoProps {
-    security: number
+    password: string
 }
 
-function SecurityInfo({ security }: SecurityInfoProps) {
+function SecurityInfo({ password }: SecurityInfoProps) {
     const { t } = useTranslation()
+    const [security, setSecurity] = useState<ZXCVBNResult>(zxcvbn(password))
+
+    useEffect(() => {
+        setSecurity(zxcvbn(password))
+    }, [password])
 
     return (
-        <div className=" w-full h-full flex justify-center items-center flex-col pb-8">
-            {security === 0 ? (
+        <div className=" w-full h-full flex flex-col items-center justify-around p-4">
+            {security.score === 0 ? (
                 <>
-                    <Image
-                        className="h-10/12"
-                        alt="Security level 1"
-                        src="Lvl0.svg"
-                    />
-                    <Chip size="lg" className="bg-red-400">
+                    <Security0Image color={'currentColor'} />
+                    <Chip size="lg" className="bg-red-400 text-black">
                         {t('very-insecure')}
                     </Chip>
                 </>
             ) : null}
-            {security === 1 ? (
+            {security.score === 1 ? (
                 <>
                     <Image
-                        className="h-10/12"
+                        classNames={{ img: 'h-full', wrapper: 'h-4/6' }}
                         alt="Security level 1"
                         src="Lvl1.svg"
                     />
-                    <Chip size="lg" className="bg-orange-400">
+                    <Chip size="lg" className="bg-orange-400 text-black">
                         {t('insecure')}
                     </Chip>
                 </>
             ) : null}
-            {security === 2 ? (
+            {security.score === 2 ? (
                 <>
                     <Image
-                        className="h-10/12"
+                        classNames={{ img: 'h-full', wrapper: 'h-4/6' }}
                         alt="Security level 2"
                         src="Lvl2.svg"
                     />
-                    <Chip size="lg" className="bg-yellow-400">
+                    <Chip size="lg" className="bg-yellow-400 text-black">
                         {t('normal')}
                     </Chip>
                 </>
             ) : null}
-            {security === 3 ? (
+            {security.score === 3 ? (
                 <>
                     <Image
-                        className="h-10/12"
+                        classNames={{ img: 'h-full', wrapper: 'h-4/6' }}
                         alt="Security level 3"
                         src="Lvl3.svg"
                     />
-                    <Chip size="lg" className="bg-lime-400">
+                    <Chip size="lg" className="bg-lime-400 text-black">
                         {t('secure')}
                     </Chip>
                 </>
             ) : null}
-            {security === 4 ? (
+            {security.score === 4 ? (
                 <>
                     <Image
-                        className="h-10/12"
+                        classNames={{ img: 'h-full', wrapper: 'h-4/6' }}
                         alt="Security level 4"
                         src="Lvl4.svg"
                     />
-                    <Chip size="lg" className="bg-green-400">
+                    <Chip size="lg" className="bg-green-400 text-black">
                         {t('very-secure')}
                     </Chip>
                 </>
             ) : null}
+            Time to crack:{' '}
+            {security.crack_times_display.online_no_throttling_10_per_second}
         </div>
     )
 }
