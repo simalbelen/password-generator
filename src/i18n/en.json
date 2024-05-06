@@ -15,5 +15,6 @@
   "normal":"Normal",
   "secure":"Secure",
   "very-secure":"Very secure",
-  "coppied-password":"Password copied to clipboard"
+  "coppied-password":"Password copied to clipboard",
+  "crack-time":"Aproximated time to crack: "
 }

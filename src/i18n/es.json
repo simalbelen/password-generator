@@ -15,5 +15,6 @@
   "normal":"Normal",
   "secure":"Seguro",
   "very-secure":"Muy seguro",
-  "coppied-password":"Contraseña copiada al portapapeles"
+  "coppied-password":"Contraseña copiada al portapapeles",
+  "crack-time":"Tiempo aproximado para descifrarla: "
 }

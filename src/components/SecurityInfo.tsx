@@ -1,8 +1,12 @@
-import { Chip, Image } from '@nextui-org/react'
+import { Chip } from '@nextui-org/react'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import zxcvbn, { ZXCVBNResult } from 'zxcvbn'
 import Security0Image from './Images/Security0'
+import Security1Image from './Images/Security1'
+import Security2Image from './Images/Security2'
+import Security3Image from './Images/Security3'
+import Security4Image from './Images/Security4'
 
 interface SecurityInfoProps {
     password: string
@@ -28,11 +32,7 @@ function SecurityInfo({ password }: SecurityInfoProps) {
             ) : null}
             {security.score === 1 ? (
                 <>
-                    <Image
-                        classNames={{ img: 'h-full', wrapper: 'h-4/6' }}
-                        alt="Security level 1"
-                        src="Lvl1.svg"
-                    />
+                    <Security1Image color={'currentColor'} />
                     <Chip size="lg" className="bg-orange-400 text-black">
                         {t('insecure')}
                     </Chip>
@@ -40,11 +40,7 @@ function SecurityInfo({ password }: SecurityInfoProps) {
             ) : null}
             {security.score === 2 ? (
                 <>
-                    <Image
-                        classNames={{ img: 'h-full', wrapper: 'h-4/6' }}
-                        alt="Security level 2"
-                        src="Lvl2.svg"
-                    />
+                    <Security2Image color={'currentColor'} />
                     <Chip size="lg" className="bg-yellow-400 text-black">
                         {t('normal')}
                     </Chip>
@@ -52,11 +48,7 @@ function SecurityInfo({ password }: SecurityInfoProps) {
             ) : null}
             {security.score === 3 ? (
                 <>
-                    <Image
-                        classNames={{ img: 'h-full', wrapper: 'h-4/6' }}
-                        alt="Security level 3"
-                        src="Lvl3.svg"
-                    />
+                    <Security3Image color={'currentColor'} />
                     <Chip size="lg" className="bg-lime-400 text-black">
                         {t('secure')}
                     </Chip>
@@ -64,17 +56,13 @@ function SecurityInfo({ password }: SecurityInfoProps) {
             ) : null}
             {security.score === 4 ? (
                 <>
-                    <Image
-                        classNames={{ img: 'h-full', wrapper: 'h-4/6' }}
-                        alt="Security level 4"
-                        src="Lvl4.svg"
-                    />
+                    <Security4Image color={'currentColor'} />
                     <Chip size="lg" className="bg-green-400 text-black">
                         {t('very-secure')}
                     </Chip>
                 </>
             ) : null}
-            Time to crack:{' '}
+            <span>{t('crack-time')}</span>
             {security.crack_times_display.online_no_throttling_10_per_second}
         </div>
     )
