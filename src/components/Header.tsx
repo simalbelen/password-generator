@@ -18,12 +18,17 @@ function Header() {
                     <ModeSelector />
                 </NavbarItem>
             </NavbarContent>
-            <NavbarContent className="hidden sm:flex gap-4" justify="center">
+            <NavbarContent
+                className="flex gap-2 lg:gap-4 w-full"
+                justify="center"
+            >
                 <NavbarItem>
-                    <span className="text-3xl">{t('title')}</span>
+                    <span className="text-sm lg:text-3xl 2xl:text-4xl">
+                        {t('title')}
+                    </span>
                 </NavbarItem>
             </NavbarContent>
-            <NavbarContent justify="end">
+            <NavbarContent justify="end" className="w-fit">
                 <NavbarItem>
                     <LanguageSelector />
                 </NavbarItem>

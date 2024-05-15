@@ -22,12 +22,12 @@ function LengthSelector({
                 <span>{t('password-length')}</span>
             </div>
             <div className="h-3/4 w-full flex flex-col justify-around items-center">
-                <span className="bg-primary w-20 h-16 text-4xl flex justify-center items-center rounded-full">
+                <span className="bg-primary w-20 h-16 text-2xl md:text-4xl flex justify-center items-center rounded-full">
                     {passwordLength}
                 </span>
-                <div className="flex w-full gap-2 justify-center items-center">
+                <div className="flex w-full md:gap-2 justify-center items-center">
                     <div
-                        className="flex justify-center items-center bg-primary w-10 aspect-square rounded-full hover:cursor-pointer m-2 p-2"
+                        className="flex justify-center items-center bg-primary w-12 md:w-10 aspect-square rounded-full hover:cursor-pointer m-2 p-2"
                         onClick={() => {
                             passwordLength <= MIN_VALUE
                                 ? setPasswordLength(MIN_VALUE)
@@ -50,7 +50,7 @@ function LengthSelector({
                                 setPasswordLength(value[0])
                             }
                         }}
-                        className="w-11/12"
+                        className="hidden md:flex md:w-11/12"
                         classNames={{
                             thumb: 'after:bg-secondary',
                             trackWrapper:
@@ -59,7 +59,7 @@ function LengthSelector({
                         }}
                     />
                     <div
-                        className="flex justify-center items-center bg-primary w-10 aspect-square rounded-full hover:cursor-pointer m-2 p-2"
+                        className="flex justify-center items-center bg-primary w-12 md:w-10 aspect-square rounded-full hover:cursor-pointer m-2 p-2"
                         onClick={() => {
                             passwordLength >= 30
                                 ? setPasswordLength(30)

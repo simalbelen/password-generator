@@ -48,11 +48,14 @@ function PasswordView({
 
     return (
         <>
-            <span className="text-xl"> {password} </span>
-            <div className="flex gap-3">
+            <span className="text-md lg:text-xl max-w-[calc(100%-3.75rem)] md:max-w-full">
+                {password}
+            </span>
+            <div className="flex gap-1 lg:gap-3">
                 <div
-                    className="flex justify-center items-center bg-secondary w-10 aspect-square rounded-full hover:cursor-pointer"
+                    className="flex justify-center items-center bg-secondary w-7 lg:w-10 aspect-square rounded-full hover:cursor-pointer"
                     onClick={() => {
+                        console.log(password)
                         navigator.clipboard.writeText(password)
                         toast.success(t('coppied-password'))
                     }}
@@ -60,7 +63,7 @@ function PasswordView({
                     <CopyIcon color="currentColor" />
                 </div>
                 <div
-                    className="flex justify-center items-center bg-secondary w-10 aspect-square rounded-full hover:cursor-pointer"
+                    className="flex justify-center items-center bg-secondary w-7 lg:w-10 aspect-square rounded-full hover:cursor-pointer"
                     onClick={generatePassword}
                 >
                     <ReloadIcon color="currentColor" />
