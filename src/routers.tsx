@@ -6,12 +6,6 @@ export const AppRouter = () => {
         <Routes>
             <Route path={'/'}>
                 <Route index element={<Home />} />
-                <Route path="password-generator">
-                    <Route index element={<Home />} />
-                </Route>
-                {
-                    //Aqui mas routers
-                }
             </Route>
         </Routes>
     )
